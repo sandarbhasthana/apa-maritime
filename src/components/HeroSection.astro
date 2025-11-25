@@ -1,0 +1,51 @@
+---
+// Hero Section with video background
+---
+
+<section class="relative min-h-screen overflow-hidden flex items-center">
+  <!-- Video Background -->
+  <div class="absolute inset-0 z-0">
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      class="w-full h-full object-cover"
+    >
+      <source src="/videos/hero-2.mp4" type="video/mp4" />
+    </video>
+    <!-- Dark overlay for better text readability -->
+    <div class="absolute inset-0 bg-primary opacity-60"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="container-custom relative z-10 py-20">
+    <div class="flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
+      <!-- Centered Content -->
+      <div class="animate-slide-up">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          Your Global Maritime Partner
+        </h1>
+        <p class="text-xl text-gray-100 mb-8 leading-relaxed">
+          Delivering excellence in maritime logistics and shipping solutions worldwide. With decades of industry expertise, we connect you to reliable vessel solutions and comprehensive marine services.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/about" class="btn-primary bg-white text-primary hover:bg-gray-100">
+            Learn About Us
+          </a>
+          <a href="/contact" class="btn-outline">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </div>
+</section>
+
