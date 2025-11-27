@@ -1,12 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 ---
 
 <Layout title="About APA Maritime" description="Learn about APA Maritime's 25+ years of experience in maritime logistics and shipping solutions.">
   <!-- Hero Section -->
-  <section class="text-white py-20" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);">
-    <div class="container-custom">
-      <div class="max-w-3xl animate-slide-up">
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <Image
+        src="/images/about.jpeg"
+        alt="About APA Maritime"
+        class="w-full h-full object-cover"
+        width={1920}
+        height={1080}
+        loading="eager"
+      />
+      <!-- Dark overlay for better text readability -->
+      <div class="absolute inset-0 bg-primary opacity-60"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container-custom relative z-10 text-center">
+      <div class="max-w-3xl mx-auto animate-slide-up">
         <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">About APA Maritime</h1>
         <p class="text-xl text-gray-100">
           With over 25 years of industry expertise, we've established ourselves as a trusted leader in maritime logistics and shipping solutions.
@@ -22,13 +38,19 @@ import Layout from '../layouts/Layout.astro';
         <div class="animate-slide-right">
           <h2 class="section-title">Our Story</h2>
           <p class="text-gray-600 mb-4 leading-relaxed">
-            APA Maritime was founded with a simple mission: to revolutionize maritime logistics by combining industry expertise with innovative solutions. Over the past 25 years, we've grown from a small brokerage firm to a global maritime services provider.
-          </p>
-          <p class="text-gray-600 mb-4 leading-relaxed">
-            Our commitment to excellence, reliability, and customer satisfaction has earned us the trust of hundreds of clients worldwide. We specialize in ship chartering, broking, and comprehensive marine consultancy services.
-          </p>
-          <p class="text-gray-600 leading-relaxed">
-            Today, we continue to innovate and adapt to the ever-changing maritime industry, ensuring our clients always have access to the best solutions and services available.
+            APA Maritime stands as a premier maritime solutions provider, committed to delivering comprehensive and integrated services across the global shipping value chain. The company’s mission is centred on empowering clients with strategic advantages, enhancing operational efficiency, and driving sustainable growth within a dynamic and complex industry.
+
+This vision is realised through three core pillars:
+
+Expert chartering and commercial operations of oil, chemical, and gas tankers
+
+Specialised shipbroking services tailored to diverse client needs
+
+A robust portfolio of maritime consulting offerings that provide strategic insights and solutions
+
+In an era defined by market volatility, increasingly stringent environmental regulations, and rapid technological advancements, APA Maritime distinguishes itself through profound domain expertise, an integrated service approach, and proactive market foresight.
+
+The company's unique value proposition extends far beyond facilitating transactions. APA Maritime delivers end-to-end strategic guidance that helps clients mitigate risks, optimise performance, and adopt future-ready solutions—particularly within the evolving LNG, LPG, oil, and chemical tanker sectors.
           </p>
         </div>
         <div class="animate-slide-left">

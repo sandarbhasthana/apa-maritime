@@ -1,5 +1,6 @@
 ---
 // Header component with navigation
+import { Image } from 'astro:assets';
 ---
 
 <header class="sticky top-0 z-50 bg-white shadow-md">
@@ -7,7 +8,7 @@
     <!-- Logo -->
     <a href="/" class="flex items-center gap-2 group">
       <div class="flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-        <img src="/logo.png" alt="APA Maritime Logo" class="w-auto h-15 object-contain" />
+        <Image src="/logo.png" alt="APA Maritime Logo" class="w-auto h-15 object-contain" width={150} height={60} loading="eager" />
       </div>
     </a>
 
@@ -24,17 +25,17 @@
 
       <!-- Services Dropdown -->
       <div class="relative group">
-        <button class="text-gray-700 font-medium flex items-center gap-1 relative">
+        <button class="text-gray-700 font-medium flex items-center gap-1 relative" aria-label="Services menu" aria-haspopup="true" aria-expanded="false">
           Services
-          <svg class="w-5 h-5 transform group-hover:rotate-180 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5 transform group-hover:rotate-180 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M7 10l5 5 5-5z"></path>
           </svg>
           <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
         </button>
-        <div class="absolute left-0 mt-3 w-48 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top group-hover:scale-y-100 scale-y-95">
-          <a href="/services/chartering" class="block px-4 py-3 text-gray-700 hover:bg-primary hover:text-white transition-colors duration-300 first:rounded-t-lg">Ship Chartering</a>
-          <a href="/services/broking" class="block px-4 py-3 text-gray-700 hover:bg-primary hover:text-white transition-colors duration-300">Ship Broking</a>
-          <a href="/services/consultancy" class="block px-4 py-3 text-gray-700 hover:bg-primary hover:text-white transition-colors duration-300 last:rounded-b-lg">Marine Services</a>
+        <div class="absolute left-0 mt-3 w-48 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top group-hover:scale-y-100 scale-y-95" role="menu">
+          <a href="/services/chartering" class="block px-4 py-3 text-gray-700 hover:bg-primary hover:text-white transition-colors duration-300 first:rounded-t-lg" role="menuitem" aria-label="Ship Chartering Services">Ship Chartering</a>
+          <a href="/services/broking" class="block px-4 py-3 text-gray-700 hover:bg-primary hover:text-white transition-colors duration-300" role="menuitem" aria-label="Ship Broking Services">Ship Broking</a>
+          <a href="/services/consultancy" class="block px-4 py-3 text-gray-700 hover:bg-primary hover:text-white transition-colors duration-300 last:rounded-b-lg" role="menuitem" aria-label="Marine Consultancy Services">Marine Services</a>
         </div>
       </div>
 

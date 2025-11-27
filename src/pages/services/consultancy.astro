@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 ---
 
 <Layout title="Marine Consultancy Services | APA Maritime" description="Expert marine consultancy and advisory services for shipping and maritime operations.">
@@ -7,10 +8,13 @@ import Layout from '../../layouts/Layout.astro';
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
-      <img
+      <Image
         src="/images/marine.jpeg"
         alt="Marine Consultancy"
         class="w-full h-full object-cover"
+        width={1920}
+        height={1080}
+        loading="eager"
       />
     </div>
 

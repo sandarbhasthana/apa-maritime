@@ -1,13 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 ---
 
 <Layout title="Our Team | APA Maritime" description="Meet the experienced maritime professionals behind APA Maritime.">
   <!-- Hero Section -->
-  <section class="text-white py-20" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 50%, var(--color-primary-dark) 100%);">
-    <div class="container-custom">
-      <div class="max-w-3xl animate-slide-up">
-        <h1 class="text-5xl md:text-6xl font-bold mb-6">Our Team</h1>
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <Image
+        src="/images/team.jpeg"
+        alt="Our Team"
+        class="w-full h-full object-cover"
+        width={1920}
+        height={1080}
+        loading="eager"
+      />
+      <!-- Dark overlay for better text readability -->
+      <div class="absolute inset-0 bg-primary opacity-60"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container-custom relative z-10 text-center">
+      <div class="max-w-3xl mx-auto animate-slide-up">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">Our Team</h1>
         <p class="text-xl text-gray-100">
           Meet the experienced maritime professionals dedicated to delivering excellence in shipping and logistics.
         </p>
@@ -16,81 +32,20 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Team Members -->
-  <section class="py-20 bg-white">
+  <section class="py-10 bg-white">
     <div class="container-custom">
       <div class="text-center mb-16">
         <h2 class="section-title">Leadership Team</h2>
-        <p class="section-subtitle">Decades of combined maritime expertise</p>
+        <p class="section-subtitle">
+        Our team comprises of 75 years of combined experience from very diverse backgrounds in seafaring , chartering, brokering, operations, chartered accountants, shipping agency and marine services capturing the full shipping value chain.
+        </p>
       </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Team Member 1 -->
-        <div class="card p-8 text-center animate-slide-up" style="animation-delay: 0.1s">
-          <div class="w-24 h-24 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-            <span class="text-white text-4xl font-bold">JD</span>
-          </div>
-          <h3 class="text-2xl font-bold text-primary mb-2">John Davidson</h3>
-          <p class="text-gray-600 mb-4">Chief Executive Officer</p>
-          <p class="text-gray-600 text-sm">25+ years in maritime logistics and vessel management</p>
-        </div>
-
-        <!-- Team Member 2 -->
-        <div class="card p-8 text-center animate-slide-up" style="animation-delay: 0.2s">
-          <div class="w-24 h-24 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-            <span class="text-white text-4xl font-bold">SM</span>
-          </div>
-          <h3 class="text-2xl font-bold text-primary mb-2">Sarah Mitchell</h3>
-          <p class="text-gray-600 mb-4">Director of Operations</p>
-          <p class="text-gray-600 text-sm">20+ years managing global shipping operations</p>
-        </div>
-
-        <!-- Team Member 3 -->
-        <div class="card p-8 text-center animate-slide-up" style="animation-delay: 0.3s">
-          <div class="w-24 h-24 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-            <span class="text-white text-4xl font-bold">RC</span>
-          </div>
-          <h3 class="text-2xl font-bold text-primary mb-2">Robert Chen</h3>
-          <p class="text-gray-600 mb-4">Head of Broking</p>
-          <p class="text-gray-600 text-sm">18+ years in ship broking and chartering</p>
-        </div>
-
-        <!-- Team Member 4 -->
-        <div class="card p-8 text-center animate-slide-up" style="animation-delay: 0.4s">
-          <div class="w-24 h-24 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-            <span class="text-white text-4xl font-bold">EK</span>
-          </div>
-          <h3 class="text-2xl font-bold text-primary mb-2">Elena Kowalski</h3>
-          <p class="text-gray-600 mb-4">Compliance Officer</p>
-          <p class="text-gray-600 text-sm">15+ years in maritime regulations and compliance</p>
-        </div>
-
-        <!-- Team Member 5 -->
-        <div class="card p-8 text-center animate-slide-up" style="animation-delay: 0.5s">
-          <div class="w-24 h-24 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-            <span class="text-white text-4xl font-bold">MJ</span>
-          </div>
-          <h3 class="text-2xl font-bold text-primary mb-2">Marcus Johnson</h3>
-          <p class="text-gray-600 mb-4">Business Development</p>
-          <p class="text-gray-600 text-sm">12+ years building maritime partnerships</p>
-        </div>
-
-        <!-- Team Member 6 -->
-        <div class="card p-8 text-center animate-slide-up" style="animation-delay: 0.6s">
-          <div class="w-24 h-24 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-            <span class="text-white text-4xl font-bold">NP</span>
-          </div>
-          <h3 class="text-2xl font-bold text-primary mb-2">Natasha Patel</h3>
-          <p class="text-gray-600 mb-4">Client Relations Manager</p>
-          <p class="text-gray-600 text-sm">10+ years in customer success and support</p>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- CTA Section -->
   <section class="py-20 text-white" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);">
     <div class="container-custom text-center">
-      <h2 class="text-4xl font-bold mb-6">Ready to Work With Us?</h2>
+      <h2 class="text-4xl font-bold mb-6 text-white">Ready to Work With Us?</h2>
       <p class="text-xl text-gray-100 mb-8 max-w-2xl mx-auto">
         Connect with our team to discuss your maritime needs and discover how we can help your business succeed.
       </p>

@@ -1,5 +1,6 @@
 ---
 // Footer component
+import { Image } from 'astro:assets';
 ---
 
 <footer class="text-white" style="background: #1E272E">
@@ -9,7 +10,7 @@
       <div class="animate-fade-in">
       <a href="/" class="flex items-center gap-2 group">
         <div class="flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-          <img src="/logo-light.png" alt="APA Maritime Logo" class="w-auto h-15 object-contain" />
+          <Image src="/logo-light.png" alt="APA Maritime Logo" class="w-auto h-15 object-contain" width={150} height={60} />
         </div>
       </a>
         <p class="text-gray-200 text-sm leading-relaxed">
@@ -53,13 +54,13 @@
             <a href="tel:+33749941921" class="footer-contact-link">+337 49 94 19 21</a>
           </p>
           <div class="flex gap-4 mt-5">
-            <a href="#" class="w-10 h-10 bg-white bg-opacity-10 hover:bg-transparent rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 group" aria-label="Facebook">
+            <a href="https://www.facebook.com/" class="w-10 h-10 bg-white bg-opacity-10 hover:bg-transparent rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 group" aria-label="Facebook">
               <i class="fab fa-facebook-f text-(--color-primary) group-hover:text-white text-lg transition-colors duration-300"></i>
             </a>
-            <a href="#" class="w-10 h-10 bg-white bg-opacity-10 hover:bg-transparent rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 group" aria-label="X (Twitter)">
+            <a href="https://twitter.com/" class="w-10 h-10 bg-white bg-opacity-10 hover:bg-transparent rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 group" aria-label="X (Twitter)">
               <i class="fab fa-x-twitter text-(--color-primary) group-hover:text-white text-lg transition-colors duration-300"></i>
             </a>
-            <a href="#" class="w-10 h-10 bg-white bg-opacity-10 hover:bg-transparent rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 group" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/" class="w-10 h-10 bg-white bg-opacity-10 hover:bg-transparent rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 group" aria-label="LinkedIn">
               <i class="fab fa-linkedin-in text-(--color-primary) group-hover:text-white text-lg transition-colors duration-300"></i>
             </a>
           </div>

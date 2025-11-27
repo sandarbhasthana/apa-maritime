@@ -7,6 +7,19 @@ export default defineConfig({
   vite: {
     ssr: {
       external: ["svgo"]
+    },
+    build: {
+      cssMinify: true,
+      minify: "terser",
+      terserOptions: {
+        compress: {
+          drop_console: true
+        }
+      }
     }
+  },
+  compressHTML: true,
+  build: {
+    inlineStylesheets: "auto"
   }
 });
