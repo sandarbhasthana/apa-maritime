@@ -4,7 +4,18 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   integrations: [],
+  server: {
+    // Fix WebSocket connection issues
+    host: true,
+    port: 4321
+  },
   vite: {
+    server: {
+      // Ensure WebSocket works properly
+      hmr: {
+        clientPort: 4321
+      }
+    },
     ssr: {
       external: ["svgo"]
     },

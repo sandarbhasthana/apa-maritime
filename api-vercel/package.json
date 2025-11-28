@@ -1,0 +1,17 @@
+{
+  "name": "apa-maritime-api",
+  "version": "1.0.0",
+  "description": "Serverless API for APA Maritime contact form",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.6"
+  },
+  "devDependencies": {
+    "vercel": "^33.0.0"
+  }
+}
+
