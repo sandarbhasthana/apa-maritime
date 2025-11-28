@@ -29,6 +29,7 @@ vercel
 ```
 
 **Important**: After deployment, you'll get a URL like:
+
 ```
 https://apa-maritime-api-xxxxx.vercel.app
 ```
@@ -41,8 +42,8 @@ https://apa-maritime-api-xxxxx.vercel.app
 2. Click on your project (apa-maritime-api)
 3. Go to **Settings** → **Environment Variables**
 4. Add these two variables:
-   - **SENDGRID_API_KEY**: `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`
-   - **SENDGRID_FROM_EMAIL**: `sandarbh88@gmail.com`
+   - **SENDGRID_API_KEY**: ``
+   - **SENDGRID_FROM_EMAIL**: ``
 5. Click **Save**
 
 ### Step 3: Deploy to Production
@@ -76,13 +77,15 @@ This redeploys with your environment variables.
 1. Open `src/pages/contact.astro`
 2. Find line ~265 (search for "YOUR_VERCEL_API_URL_HERE")
 3. Replace this:
+
    ```javascript
-   const apiUrl = 'YOUR_VERCEL_API_URL_HERE/api/contact';
+   const apiUrl = "YOUR_VERCEL_API_URL_HERE/api/contact";
    ```
-   
+
    With your actual Vercel URL:
+
    ```javascript
-   const apiUrl = 'https://apa-maritime-api-xxxxx.vercel.app/api/contact';
+   const apiUrl = "https://apa-maritime-api-xxxxx.vercel.app/api/contact";
    ```
 
 ### Step 6: Build Website
@@ -162,6 +165,7 @@ This creates a `dist/` folder with all your static files.
 ## 🎉 Once Everything Works
 
 Your setup will be:
+
 - ✅ Static website on Hostinger (fast, cheap)
 - ✅ API on Vercel (free tier, 100GB bandwidth/month)
 - ✅ Emails via SendGrid (free tier, 100 emails/day)
@@ -169,6 +173,7 @@ Your setup will be:
 ## 🔄 Future Updates
 
 **To update website**:
+
 ```bash
 # Make changes
 npm run build
@@ -176,6 +181,7 @@ npm run build
 ```
 
 **To update API**:
+
 ```bash
 cd api-vercel
 # Make changes to api/contact.js
@@ -197,4 +203,3 @@ vercel --prod
 ---
 
 Good luck! 🚀
-

@@ -1,24 +1,29 @@
-const sgMail = require('@sendgrid/mail');
+const sgMail = require("@sendgrid/mail");
 
 module.exports = async (req, res) => {
   // Enable CORS
-  res.setHeader('Access-Control-Allow-Credentials', true);
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
-    'Access-Control-Allow-Headers',
-    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+    "Access-Control-Allow-Methods",
+    "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
   );
 
   // Handle preflight request
-  if (req.method === 'OPTIONS') {
+  if (req.method === "OPTIONS") {
     res.status(200).end();
     return;
   }
 
   // Only allow POST requests
-  if (req.method !== 'POST') {
-    return res.status(405).json({ success: false, message: 'Method not allowed' });
+  if (req.method !== "POST") {
+    return res
+      .status(405)
+      .json({ success: false, message: "Method not allowed" });
   }
 
   try {
@@ -28,19 +33,31 @@ module.exports = async (req, res) => {
     if (!name || !email || !subject || !message) {
       return res.status(400).json({
         success: false,
-        message: 'Missing required fields'
+        message: "Missing required fields"
       });
     }
 
     // Initialize SendGrid
-    const apiKey = process.env.SENDGRID_API_KEY;
-    const fromEmail = process.env.SENDGRID_FROM_EMAIL;
+    const apiKey = process.env.SENDGRID_API_KEY?.trim();
+    const fromEmail = process.env.SENDGRID_FROM_EMAIL?.trim();
 
     if (!apiKey) {
-      console.error('SendGrid API key is not configured');
+      console.error("SendGrid API key is not configured");
       return res.status(500).json({
         success: false,
-        message: 'Server configuration error'
+        message: "Server configuration error"
+      });
+    }
+
+    // Validate API key format
+    if (!apiKey.startsWith("SG.")) {
+      console.error(
+        "Invalid SendGrid API key format. Key should start with 'SG.'"
+      );
+      console.error("Current key starts with:", apiKey.substring(0, 10));
+      return res.status(500).json({
+        success: false,
+        message: "Server configuration error"
       });
     }
 
@@ -48,8 +65,8 @@ module.exports = async (req, res) => {
 
     // Email content
     const msg = {
-      to: 'commercial@apamaritime.com',
-      from: fromEmail || 'noreply@apamaritime.com',
+      to: "commercial@apamaritime.com",
+      from: fromEmail || "noreply@apamaritime.com",
       replyTo: email,
       subject: `Contact Form: ${subject}`,
       html: `
@@ -60,7 +77,9 @@ module.exports = async (req, res) => {
           <div style="margin: 20px 0;">
             <p style="margin: 10px 0;"><strong>Name:</strong> ${name}</p>
             <p style="margin: 10px 0;"><strong>Email:</strong> ${email}</p>
-            <p style="margin: 10px 0;"><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+            <p style="margin: 10px 0;"><strong>Phone:</strong> ${
+              phone || "Not provided"
+            }</p>
             <p style="margin: 10px 0;"><strong>Subject:</strong> ${subject}</p>
           </div>
           <div style="margin: 20px 0;">
@@ -80,7 +99,7 @@ New Contact Form Submission
 
 Name: ${name}
 Email: ${email}
-Phone: ${phone || 'Not provided'}
+Phone: ${phone || "Not provided"}
 Subject: ${subject}
 
 Message:
@@ -96,20 +115,19 @@ This email was sent from the APA Maritime contact form.
 
     return res.status(200).json({
       success: true,
-      message: 'Email sent successfully'
+      message: "Email sent successfully"
     });
   } catch (error) {
-    console.error('Error sending email:', error);
-    
+    console.error("Error sending email:", error);
+
     // Log more details for SendGrid errors
     if (error.response) {
-      console.error('SendGrid error details:', error.response.body);
+      console.error("SendGrid error details:", error.response.body);
     }
-    
+
     return res.status(500).json({
       success: false,
-      message: 'Failed to send email'
+      message: "Failed to send email"
     });
   }
 };
-
