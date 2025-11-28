@@ -65,8 +65,8 @@ module.exports = async (req, res) => {
 
     // Email content
     const msg = {
-      to: "commercial@apamaritime.com",
-      from: fromEmail || "noreply@apamaritime.com",
+      to: "commercial@apamaritime.net",
+      from: fromEmail || "noreply@apamaritime.net",
       replyTo: email,
       subject: `Contact Form: ${subject}`,
       html: `
