@@ -1,16 +1,21 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { Image } from 'astro:assets';
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
 ---
 
-<Layout title="Marine Consultancy Services | APA Maritime" description="Expert marine consultancy and advisory services for shipping and maritime operations.">
+<Layout
+  title="Maritime Consulting Services | APA Maritime"
+  description="Data-driven, practical maritime consultancy to help clients navigate commercial, operational, and compliance challenges."
+>
   <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <section
+    class="relative min-h-screen flex items-center justify-center overflow-hidden"
+  >
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
       <Image
         src="/images/marine.jpeg"
-        alt="Marine Consultancy"
+        alt="Maritime Consulting"
         class="w-full h-full object-cover"
         width={1920}
         height={1080}
@@ -19,97 +24,357 @@ import { Image } from 'astro:assets';
     </div>
 
     <!-- Overlay -->
-    <div class="absolute inset-0 z-10" style="background: rgba(13, 51, 72, 0.7);"></div>
+    <div
+      class="absolute inset-0 z-10"
+      style="background: rgba(13, 51, 72, 0.7);"
+    >
+    </div>
 
     <!-- Content -->
     <div class="container-custom relative z-20 text-center">
       <div class="max-w-3xl mx-auto animate-slide-up">
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">Marine Services</h1>
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
+          Maritime Consulting
+        </h1>
         <p class="text-xl md:text-2xl text-gray-100">
-          Strategic advisory and consultancy services to optimize your maritime operations and maximize efficiency.
+          Data-driven, practical consultancy to navigate commercial,
+          operational, and compliance challenges.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Main Content -->
-  <section class="py-20 bg-white">
+  <!-- Intro Section -->
+  <section class="py-12 bg-white">
     <div class="container-custom">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-        <div class="animate-slide-right">
-          <h2 class="section-title">Expert Marine Services</h2>
-          <p class="text-gray-600 mb-4 leading-relaxed">
-            Our team of experienced maritime consultants provides expert advisory tailored to the strategic and operational complexities of modern maritime commerce. Our services encompass market intelligence, technical consultancy, and commercial support—particularly focused on high-growth and emerging segments such as LNG, LPG, Ammonia, Oil/Chemical Tankers, and LNG Bunkering.
-          </p>
-          <ul class="space-y-3">
-            <li class="flex items-center gap-3">
-              <svg class="w-5 h-5 text-primary shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              <span class="text-gray-700">Fleet management optimization</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-5 h-5 text-primary shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              <span class="text-gray-700">Regulatory compliance guidance</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-5 h-5 text-primary shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              <span class="text-gray-700">Market analysis and forecasting</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-5 h-5 text-primary shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              <span class="text-gray-700">Risk assessment and mitigation</span>
-            </li>
-          </ul>
-        </div>
-        <div class="animate-slide-left">
-          <div class="rounded-lg p-12 text-white" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);">
-            <h3 class="text-3xl font-bold mb-8 text-white">Our Expertise</h3>
-            <ul class="space-y-4">
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span class="text-lg">Vessel Performance Analysis</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span class="text-lg">Operational Efficiency</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span class="text-lg">Compliance & Safety</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span class="text-lg">Strategic Planning</span>
-              </li>
-            </ul>
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-2xl font-bold text-primary mb-6 animate-slide-up">
+          Strategic Maritime Consultancy
+        </h2>
+        <p
+          class="text-gray-600 leading-relaxed animate-slide-up"
+          style="animation-delay: 0.1s"
+        >
+          As markets evolve and regulations intensify, organisations need
+          reliable insights and strategic support. APA Maritime provides
+          data-driven, practical maritime consultancy to help clients navigate
+          commercial, operational, and compliance challenges in the global
+          shipping industry.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Approach Section -->
+  <section class="py-12 bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h3
+          class="text-2xl font-bold text-primary mb-6 text-center animate-slide-up"
+        >
+          Our Consulting Approach
+        </h3>
+        <p
+          class="text-gray-600 leading-relaxed animate-slide-up"
+          style="animation-delay: 0.1s"
+        >
+          We combine industry experience, analytical tools, and hands-on
+          operational expertise to deliver advice that is both strategic and
+          actionable. Whether optimising freight exposure, evaluating tonnage
+          options, or assessing regulatory impacts, we tailor our solutions to
+          each client's business model and long-term goals.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consulting Capabilities Section -->
+  <section class="py-12 bg-white">
+    <div class="container-custom">
+      <h3
+        class="text-2xl font-bold text-primary mb-10 text-center animate-slide-up"
+      >
+        Consulting Capabilities
+      </h3>
+      <!-- Top row: 3 cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+        <!-- Card 1 -->
+        <div
+          class="group bg-gray-50 rounded-xl p-6 hover:bg-primary hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-slide-up"
+          style="animation-delay: 0.1s"
+        >
+          <div
+            class="w-12 h-12 bg-primary group-hover:bg-white rounded-full flex items-center justify-center mb-4 transition-colors duration-500"
+          >
+            <span
+              class="offer-number text-white font-bold text-lg transition-colors duration-500"
+              >1</span
+            >
           </div>
+          <h4
+            class="text-lg font-bold text-primary group-hover:text-white mb-3 transition-colors duration-500"
+          >
+            Commercial Strategy & Market Advisory
+          </h4>
+          <p
+            class="text-gray-600 group-hover:text-gray-100 text-sm transition-colors duration-500"
+          >
+            Freight market analysis, benchmarking, trade-flow assessments, and
+            strategy development for charterers, owners, and traders.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="group bg-gray-50 rounded-xl p-6 hover:bg-primary hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-slide-up"
+          style="animation-delay: 0.15s"
+        >
+          <div
+            class="w-12 h-12 bg-primary group-hover:bg-white rounded-full flex items-center justify-center mb-4 transition-colors duration-500"
+          >
+            <span
+              class="offer-number text-white font-bold text-lg transition-colors duration-500"
+              >2</span
+            >
+          </div>
+          <h4
+            class="text-lg font-bold text-primary group-hover:text-white mb-3 transition-colors duration-500"
+          >
+            Fleet & Tonnage Planning
+          </h4>
+          <p
+            class="text-gray-600 group-hover:text-gray-100 text-sm transition-colors duration-500"
+          >
+            Evaluating vessel types, employment strategies, long-term
+            chartering, and fleet expansion or renewal models.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="group bg-gray-50 rounded-xl p-6 hover:bg-primary hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-slide-up"
+          style="animation-delay: 0.2s"
+        >
+          <div
+            class="w-12 h-12 bg-primary group-hover:bg-white rounded-full flex items-center justify-center mb-4 transition-colors duration-500"
+          >
+            <span
+              class="offer-number text-white font-bold text-lg transition-colors duration-500"
+              >3</span
+            >
+          </div>
+          <h4
+            class="text-lg font-bold text-primary group-hover:text-white mb-3 transition-colors duration-500"
+          >
+            Operational Efficiency & Voyage Performance
+          </h4>
+          <p
+            class="text-gray-600 group-hover:text-gray-100 text-sm transition-colors duration-500"
+          >
+            Assessment of voyage planning, bunker strategies, performance
+            monitoring, and operational cost optimisation.
+          </p>
         </div>
       </div>
 
-      <!-- CTA -->
-      <div class="text-center py-12 border-t border-gray-200">
-        <h2 class="text-3xl font-bold text-primary mb-4">Need Consultancy Services?</h2>
-        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact our consultancy team to discuss your maritime challenges and opportunities.
-        </p>
-        <a href="/contact" class="btn-primary">Request Consultation</a>
+      <!-- Bottom row: 2 cards centered -->
+      <div class="flex flex-col md:flex-row justify-center gap-6">
+        <!-- Card 4 -->
+        <div
+          class="group bg-gray-50 rounded-xl p-6 hover:bg-primary hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-slide-up md:w-[calc(33.333%-0.5rem)]"
+          style="animation-delay: 0.25s"
+        >
+          <div
+            class="w-12 h-12 bg-primary group-hover:bg-white rounded-full flex items-center justify-center mb-4 transition-colors duration-500"
+          >
+            <span
+              class="offer-number text-white font-bold text-lg transition-colors duration-500"
+              >4</span
+            >
+          </div>
+          <h4
+            class="text-lg font-bold text-primary group-hover:text-white mb-3 transition-colors duration-500"
+          >
+            Regulatory & Environmental Advisory
+          </h4>
+          <p
+            class="text-gray-600 group-hover:text-gray-100 text-sm transition-colors duration-500"
+          >
+            Guidance on evolving IMO regulations, CII/EEXI impacts, EU ETS
+            requirements, and decarbonisation strategies.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="group bg-gray-50 rounded-xl p-6 hover:bg-primary hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-slide-up md:w-[calc(33.333%-0.5rem)]"
+          style="animation-delay: 0.3s"
+        >
+          <div
+            class="w-12 h-12 bg-primary group-hover:bg-white rounded-full flex items-center justify-center mb-4 transition-colors duration-500"
+          >
+            <span
+              class="offer-number text-white font-bold text-lg transition-colors duration-500"
+              >5</span
+            >
+          </div>
+          <h4
+            class="text-lg font-bold text-primary group-hover:text-white mb-3 transition-colors duration-500"
+          >
+            Risk Management & Contract Review
+          </h4>
+          <p
+            class="text-gray-600 group-hover:text-gray-100 text-sm transition-colors duration-500"
+          >
+            Review of charter parties, operational clauses, liabilities, and
+            exposure to freight market volatility.
+          </p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="py-12 bg-gray-50">
+    <div class="container-custom">
+      <h3
+        class="text-2xl font-bold text-primary mb-10 text-center animate-slide-up"
+      >
+        Why Choose Our Consulting Services
+      </h3>
+      <div class="max-w-3xl mx-auto space-y-4">
+        <div
+          class="flex items-start gap-4 animate-slide-up"
+          style="animation-delay: 0.1s"
+        >
+          <div
+            class="w-6 h-6 bg-primary rounded-full flex items-center justify-center shrink-0 mt-0.5"
+          >
+            <svg
+              class="w-4 h-4 text-white"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <p class="text-gray-700">Practical, industry-backed advice</p>
+        </div>
+        <div
+          class="flex items-start gap-4 animate-slide-up"
+          style="animation-delay: 0.15s"
+        >
+          <div
+            class="w-6 h-6 bg-primary rounded-full flex items-center justify-center shrink-0 mt-0.5"
+          >
+            <svg
+              class="w-4 h-4 text-white"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <p class="text-gray-700">Neutral and independent analysis</p>
+        </div>
+        <div
+          class="flex items-start gap-4 animate-slide-up"
+          style="animation-delay: 0.2s"
+        >
+          <div
+            class="w-6 h-6 bg-primary rounded-full flex items-center justify-center shrink-0 mt-0.5"
+          >
+            <svg
+              class="w-4 h-4 text-white"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <p class="text-gray-700">
+            Clear deliverables and actionable recommendations
+          </p>
+        </div>
+        <div
+          class="flex items-start gap-4 animate-slide-up"
+          style="animation-delay: 0.25s"
+        >
+          <div
+            class="w-6 h-6 bg-primary rounded-full flex items-center justify-center shrink-0 mt-0.5"
+          >
+            <svg
+              class="w-4 h-4 text-white"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <p class="text-gray-700">
+            Strong understanding of both commercial and operational realities
+          </p>
+        </div>
+        <div
+          class="flex items-start gap-4 animate-slide-up"
+          style="animation-delay: 0.3s"
+        >
+          <div
+            class="w-6 h-6 bg-primary rounded-full flex items-center justify-center shrink-0 mt-0.5"
+          >
+            <svg
+              class="w-4 h-4 text-white"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <p class="text-gray-700">
+            Forward-looking insights based on market intelligence
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section
+    class="py-16 text-white text-center"
+    style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);"
+  >
+    <div class="container-custom">
+      <p class="text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
+        We help organisations make informed, strategic decisions with
+        confidence.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block border-2 border-white text-white font-semibold px-8 py-3 rounded-lg hover:bg-white hover:text-primary transition-colors duration-300"
+        >Request Consultation</a
+      >
     </div>
   </section>
 </Layout>
 
+<style>
+  /* Fix number text color on hover */
+  .group:hover .offer-number {
+    color: var(--color-primary) !important;
+  }
+</style>

@@ -50,7 +50,7 @@ import { Image } from "astro:assets";
                   ></path>
                 </svg>
                 <div>
-                  <h3 class="font-bold text-gray-900 mb-2">Seatruf Shipping</h3>
+                  <h3 class="font-bold text-gray-900 mb-2">APA Maritime</h3>
                   <p class="text-gray-600 leading-relaxed">
                     76 HOUGANG AVENUE 7,<br />
                     #08-18, THE FLORIDA,<br />
@@ -147,7 +147,7 @@ import { Image } from "astro:assets";
                   ></path>
                 </svg>
                 <div>
-                  <h3 class="font-bold text-gray-900 mb-2">Seatruf Shipping</h3>
+                  <h3 class="font-bold text-gray-900 mb-2">APA Maritime</h3>
                   <p class="text-gray-600 leading-relaxed uppercase">
                     RM712, B Block North building, SenlanMeihuan Plaza, <br />
                     No.519 Qifan RD, Pudong New Area, <br />
@@ -172,10 +172,10 @@ import { Image } from "astro:assets";
                 <div>
                   <h3 class="font-bold text-gray-900 mb-1">Email</h3>
                   <a
-                    href="mailto:angel.lee@apamaritime.net"
+                    href="mailto:commercial@apamaritime.net"
                     class="text-primary hover:text-primary-dark transition-colors duration-300"
                   >
-                    angel.lee@apamaritime.net
+                    commercial@apamaritime.net
                   </a>
                 </div>
               </div>
@@ -267,23 +267,66 @@ import { Image } from "astro:assets";
               />
             </div>
 
-            <!-- Subject Selector -->
-            <div>
-              <select
-                id="subject"
-                name="subject"
-                required
-                class="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 bg-white text-gray-700"
+            <!-- Subject Selector (Custom Dropdown) -->
+            <div class="relative">
+              <input type="hidden" id="subject" name="subject" required />
+              <div
+                id="subject-dropdown"
+                class="w-full px-4 py-4 border border-gray-300 rounded-lg bg-white text-gray-700 cursor-pointer flex items-center justify-between transition-all duration-300 focus-within:ring-2 focus-within:ring-primary"
+                tabindex="0"
               >
-                <option value="" disabled selected>--Select an option--</option>
-                <option value="General Enquiry">General Enquiry</option>
-                <option value="Broking Enquiry">Broking Enquiry</option>
-                <option value="Chartering Enquiry">Chartering Enquiry</option>
-                <option value="Marine Services Enquiry"
-                  >Marine Services Enquiry</option
+                <span id="subject-selected" class="text-gray-400"
+                  >--Reason to contact--</span
                 >
-                <option value="Complaint">Complaint</option>
-              </select>
+                <svg
+                  class="w-5 h-5 text-gray-500 transition-transform duration-200"
+                  id="subject-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+              <ul
+                id="subject-options"
+                class="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg hidden"
+              >
+                <li
+                  class="subject-option px-4 py-3 cursor-pointer transition-all duration-200"
+                  data-value="General Enquiry"
+                >
+                  General Enquiry
+                </li>
+                <li
+                  class="subject-option px-4 py-3 cursor-pointer transition-all duration-200"
+                  data-value="Broking Enquiry"
+                >
+                  Broking Enquiry
+                </li>
+                <li
+                  class="subject-option px-4 py-3 cursor-pointer transition-all duration-200"
+                  data-value="Chartering Enquiry"
+                >
+                  Chartering Enquiry
+                </li>
+                <li
+                  class="subject-option px-4 py-3 cursor-pointer transition-all duration-200"
+                  data-value="Marine Services Enquiry"
+                >
+                  Marine Services Enquiry
+                </li>
+                <li
+                  class="subject-option px-4 py-3 cursor-pointer transition-all duration-200"
+                  data-value="Complaint"
+                >
+                  Complaint
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -303,7 +346,7 @@ import { Image } from "astro:assets";
             <button
               type="submit"
               id="submit-btn"
-              class="px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all duration-300 flex items-center justify-center gap-2 min-w-[200px]"
+              class="px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all duration-300 flex items-center justify-center gap-2 min-w-[200px] cursor-pointer"
             >
               <span id="btn-text">Send Message</span>
               <svg
@@ -372,6 +415,69 @@ import { Image } from "astro:assets";
         utilsScript:
           "https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/js/utils.js",
       } as any);
+    }
+
+    // Custom Subject Dropdown
+    const subjectDropdown = document.querySelector(
+      "#subject-dropdown",
+    ) as HTMLElement;
+    const subjectOptions = document.querySelector(
+      "#subject-options",
+    ) as HTMLElement;
+    const subjectSelected = document.querySelector(
+      "#subject-selected",
+    ) as HTMLElement;
+    const subjectInput = document.querySelector("#subject") as HTMLInputElement;
+    const options = document.querySelectorAll(".subject-option");
+
+    if (subjectDropdown && subjectOptions) {
+      // Toggle dropdown
+      subjectDropdown.addEventListener("click", () => {
+        subjectDropdown.classList.toggle("open");
+        subjectOptions.classList.toggle("hidden");
+      });
+
+      // Handle keyboard navigation
+      subjectDropdown.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          subjectDropdown.classList.toggle("open");
+          subjectOptions.classList.toggle("hidden");
+        } else if (e.key === "Escape") {
+          subjectDropdown.classList.remove("open");
+          subjectOptions.classList.add("hidden");
+        }
+      });
+
+      // Handle option selection
+      options.forEach((option) => {
+        option.addEventListener("click", () => {
+          const value = (option as HTMLElement).dataset.value || "";
+          subjectInput.value = value;
+          subjectSelected.textContent = value;
+          subjectSelected.classList.remove("text-gray-400");
+          subjectSelected.classList.add("text-gray-700");
+
+          // Update selected state
+          options.forEach((opt) => opt.classList.remove("selected"));
+          option.classList.add("selected");
+
+          // Close dropdown
+          subjectDropdown.classList.remove("open");
+          subjectOptions.classList.add("hidden");
+        });
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener("click", (e) => {
+        if (
+          !subjectDropdown.contains(e.target as Node) &&
+          !subjectOptions.contains(e.target as Node)
+        ) {
+          subjectDropdown.classList.remove("open");
+          subjectOptions.classList.add("hidden");
+        }
+      });
     }
 
     // Handle form submission
@@ -742,6 +848,43 @@ import { Image } from "astro:assets";
     padding-bottom: 5px !important;
     margin-bottom: 5px !important;
     border-bottom: 1px solid #e5e7eb !important;
+  }
+
+  /* Custom Subject Dropdown Styling */
+  #subject-dropdown {
+    min-height: 56px;
+  }
+
+  #subject-dropdown.open {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(12, 51, 72, 0.2);
+  }
+
+  #subject-dropdown.open #subject-arrow {
+    transform: rotate(180deg);
+  }
+
+  .subject-option {
+    color: #374151;
+  }
+
+  .subject-option:first-child {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
+  .subject-option:last-child {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  .subject-option:hover {
+    background-color: #0c3348 !important;
+    color: white !important;
+  }
+
+  .subject-option.selected {
+    background-color: #f3f4f6;
   }
 
   /* Button Airplane Animation */

@@ -1,0 +1,533 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+---
+
+<Layout
+    title="Marine Services | APA Maritime"
+    description="Comprehensive maritime services including ship agency, docking consultancy, technical services, and environmental solutions."
+>
+    <!-- Hero Section -->
+    <section
+        class="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <Image
+                src="/images/marine.jpeg"
+                alt="Marine Services"
+                class="w-full h-full object-cover"
+                width={1920}
+                height={1080}
+                loading="eager"
+            />
+        </div>
+
+        <!-- Overlay -->
+        <div
+            class="absolute inset-0 z-10"
+            style="background: rgba(13, 51, 72, 0.7);"
+        >
+        </div>
+
+        <!-- Content -->
+        <div class="container-custom relative z-20 text-center">
+            <div class="max-w-3xl mx-auto animate-slide-up">
+                <h1
+                    class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white"
+                >
+                    Marine Services
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-100">
+                    Comprehensive in-port and in-yard solutions across
+                    Asia-Pacific, Middle East & Europe
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="py-16 bg-white">
+        <div class="container-custom">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2
+                    class="text-2xl font-bold text-primary mb-6 animate-slide-up"
+                >
+                    Trusted Maritime Support
+                </h2>
+                <p
+                    class="text-gray-600 leading-relaxed mb-6 animate-slide-up"
+                    style="animation-delay: 0.1s"
+                >
+                    At APA Maritime, we deliver a comprehensive suite of
+                    maritime services designed to support safe, efficient, and
+                    compliant vessel operations across Asia-Pacific, Middle East
+                    and Europe—with a strong, specialised presence in major
+                    Chinese ports. Backed by reliable local partners, technical
+                    expertise, and long-standing industry relationships, we
+                    ensure every service is executed professionally,
+                    transparently, and on time.
+                </p>
+                <p
+                    class="text-gray-600 leading-relaxed animate-slide-up"
+                    style="animation-delay: 0.15s"
+                >
+                    Our service portfolio covers agency operations, technical
+                    support, dry-dock consultancy, and environmental solutions,
+                    giving shipowners and operators a trusted partner for all
+                    in-port and in-yard requirements.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- China Coverage Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container-custom">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3
+                    class="text-2xl font-bold text-primary mb-6 animate-slide-up"
+                >
+                    Our China Coverage
+                </h3>
+                <p
+                    class="text-gray-600 leading-relaxed mb-8 animate-slide-up"
+                    style="animation-delay: 0.1s"
+                >
+                    We provide coordinated services across all major Chinese
+                    ports, including:
+                </p>
+                <!-- Marquee Container -->
+                <div
+                    class="marquee-container relative overflow-hidden animate-slide-up"
+                    style="animation-delay: 0.2s"
+                >
+                    <!-- Left fade overlay -->
+                    <div
+                        class="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
+                        style="background: linear-gradient(to right, rgb(249 250 251) 0%, transparent 100%);"
+                    >
+                    </div>
+                    <!-- Right fade overlay -->
+                    <div
+                        class="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
+                        style="background: linear-gradient(to left, rgb(249 250 251) 0%, transparent 100%);"
+                    >
+                    </div>
+
+                    <!-- Marquee track -->
+                    <div class="marquee-track flex gap-4 py-2">
+                        <!-- First set of badges -->
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Shanghai</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Zhoushan</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Dalian</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Qingdao</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Tianjin</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Jiangyin</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Nantong</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Ningbo</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Guangzhou</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Shenzhen</span
+                        >
+                        <!-- Duplicate set for seamless loop -->
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Shanghai</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Zhoushan</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Dalian</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Qingdao</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Tianjin</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Jiangyin</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Nantong</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Ningbo</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Guangzhou</span
+                        >
+                        <span
+                            class="port-badge px-5 py-2.5 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap"
+                            >Shenzhen</span
+                        >
+                    </div>
+                </div>
+                <p
+                    class="text-gray-500 mt-6 text-sm animate-slide-up"
+                    style="animation-delay: 0.3s"
+                >
+                    …and most other primary commercial and industrial ports
+                    across China.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Portfolio Section -->
+    <section id="service-portfolio" class="py-16 bg-white">
+        <div class="container-custom">
+            <h3
+                class="text-2xl font-bold text-primary mb-4 text-center animate-slide-up"
+            >
+                Our Service Portfolio
+            </h3>
+            <p
+                class="text-gray-600 text-center mb-12 max-w-2xl mx-auto animate-slide-up"
+                style="animation-delay: 0.1s"
+            >
+                Explore our comprehensive marine services designed for
+                shipowners and operators
+            </p>
+
+            <!-- Service Cards Grid - 2x2 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card 1: Ship Agency Services -->
+                <a
+                    href="/services/ship-agency"
+                    class="service-card group relative overflow-hidden rounded-2xl h-80 animate-slide-up"
+                    style="animation-delay: 0.15s"
+                >
+                    <div
+                        class="absolute inset-0 bg-[url('/images/China/ship-service.jpeg')] bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
+                    >
+                    </div>
+                    <div
+                        class="absolute inset-0"
+                        style="background: rgba(13, 51, 72, 0.7);"
+                    >
+                    </div>
+                    <div
+                        class="relative z-10 h-full flex flex-col justify-end p-8"
+                    >
+                        <div class="flex items-center gap-3 mb-3">
+                            <span
+                                class="w-10 h-10 bg-white text-primary rounded-full flex items-center justify-center font-bold text-lg"
+                                >1</span
+                            >
+                            <span
+                                class="text-white/80 text-sm font-medium uppercase tracking-wider"
+                                >Agency Operations</span
+                            >
+                        </div>
+                        <h4
+                            class="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:translate-x-2 transition-transform duration-300"
+                        >
+                            Ship Agency Services
+                        </h4>
+                        <p class="text-gray-200 text-sm mb-4 line-clamp-2">
+                            Full agency support including port agency,
+                            protective agency, husbandry arrangements, and
+                            docking agency support.
+                        </p>
+                        <span
+                            class="inline-flex items-center text-white font-semibold group-hover:gap-3 gap-2 transition-all duration-300"
+                        >
+                            Learn More
+                            <svg
+                                class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Card 2: Docking Repair Consultancy -->
+                <a
+                    href="/services/docking-consultancy"
+                    class="service-card group relative overflow-hidden rounded-2xl h-80 animate-slide-up"
+                    style="animation-delay: 0.2s"
+                >
+                    <div
+                        class="absolute inset-0 bg-[url('/images/China/dry-dock.jpeg')] bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
+                    >
+                    </div>
+                    <div
+                        class="absolute inset-0"
+                        style="background: rgba(13, 51, 72, 0.7);"
+                    >
+                    </div>
+                    <div
+                        class="relative z-10 h-full flex flex-col justify-end p-8"
+                    >
+                        <div class="flex items-center gap-3 mb-3">
+                            <span
+                                class="w-10 h-10 bg-white text-primary rounded-full flex items-center justify-center font-bold text-lg"
+                                >2</span
+                            >
+                            <span
+                                class="text-white/80 text-sm font-medium uppercase tracking-wider"
+                                >Dry-Dock Support</span
+                            >
+                        </div>
+                        <h4
+                            class="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:translate-x-2 transition-transform duration-300"
+                        >
+                            Docking Repair Consultancy
+                        </h4>
+                        <p class="text-gray-200 text-sm mb-4 line-clamp-2">
+                            Professional supervision, cost control, and project
+                            management for dry-docking, retrofits, and repairs.
+                        </p>
+                        <span
+                            class="inline-flex items-center text-white font-semibold group-hover:gap-3 gap-2 transition-all duration-300"
+                        >
+                            Learn More
+                            <svg
+                                class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Card 3: Technical Services -->
+                <a
+                    href="/services/technical-services"
+                    class="service-card group relative overflow-hidden rounded-2xl h-80 animate-slide-up"
+                    style="animation-delay: 0.25s"
+                >
+                    <div
+                        class="absolute inset-0 bg-[url('/images/China/technical.jpeg')] bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
+                    >
+                    </div>
+                    <div
+                        class="absolute inset-0"
+                        style="background: rgba(13, 51, 72, 0.7);"
+                    >
+                    </div>
+                    <div
+                        class="relative z-10 h-full flex flex-col justify-end p-8"
+                    >
+                        <div class="flex items-center gap-3 mb-3">
+                            <span
+                                class="w-10 h-10 bg-white text-primary rounded-full flex items-center justify-center font-bold text-lg"
+                                >3</span
+                            >
+                            <span
+                                class="text-white/80 text-sm font-medium uppercase tracking-wider"
+                                >Technical & Supplies</span
+                            >
+                        </div>
+                        <h4
+                            class="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:translate-x-2 transition-transform duration-300"
+                        >
+                            Technical Services & Automation
+                        </h4>
+                        <p class="text-gray-200 text-sm mb-4 line-clamp-2">
+                            Deck machinery, electrical, pump systems, navigation
+                            equipment, engine services, and emergency technical
+                            support.
+                        </p>
+                        <span
+                            class="inline-flex items-center text-white font-semibold group-hover:gap-3 gap-2 transition-all duration-300"
+                        >
+                            Learn More
+                            <svg
+                                class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Card 4: Environmental Services -->
+                <a
+                    href="/services/environmental-services"
+                    class="service-card group relative overflow-hidden rounded-2xl h-80 animate-slide-up"
+                    style="animation-delay: 0.3s"
+                >
+                    <div
+                        class="absolute inset-0 bg-[url('/images/China/env-sludge.jpeg')] bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
+                    >
+                    </div>
+                    <div
+                        class="absolute inset-0"
+                        style="background: rgba(13, 51, 72, 0.7);"
+                    >
+                    </div>
+                    <div
+                        class="relative z-10 h-full flex flex-col justify-end p-8"
+                    >
+                        <div class="flex items-center gap-3 mb-3">
+                            <span
+                                class="w-10 h-10 bg-white text-primary rounded-full flex items-center justify-center font-bold text-lg"
+                                >4</span
+                            >
+                            <span
+                                class="text-white/80 text-sm font-medium uppercase tracking-wider"
+                                >Environmental</span
+                            >
+                        </div>
+                        <h4
+                            class="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:translate-x-2 transition-transform duration-300"
+                        >
+                            Environmental & Sludge Management
+                        </h4>
+                        <p class="text-gray-200 text-sm mb-4 line-clamp-2">
+                            Certified de-slopping, sludge disposal, tanker
+                            cleaning, EGCS wash-water collection, and SPRO
+                            compliance.
+                        </p>
+                        <span
+                            class="inline-flex items-center text-white font-semibold group-hover:gap-3 gap-2 transition-all duration-300"
+                        >
+                            Learn More
+                            <svg
+                                class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+        class="py-16 text-white text-center"
+        style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);"
+    >
+        <div class="container-custom">
+            <p class="text-xl leading-relaxed mb-8 max-w-3xl mx-auto">
+                Your trusted partner for all in-port and in-yard requirements
+                across Asia-Pacific, Middle East, and Europe.
+            </p>
+            <a
+                href="/contact"
+                class="inline-block border-2 border-white text-white font-semibold px-8 py-3 rounded-lg hover:bg-white hover:text-primary transition-colors duration-300"
+                >Contact Us</a
+            >
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .service-card {
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .service-card:hover {
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+        transform: translateY(-8px);
+    }
+
+    .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* Marquee styles */
+    .marquee-track {
+        animation: marquee 25s linear infinite;
+        width: max-content;
+    }
+
+    .marquee-container:hover .marquee-track {
+        animation-play-state: paused;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    .port-badge {
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .port-badge:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+</style>
